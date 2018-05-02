@@ -1,19 +1,17 @@
-![Alt text](https://raw.githubusercontent.com/AmarShaked/ReactWeather/master/widget.png?raw=true "React Weather")
+![Alt text](https://raw.githubusercontent.com/AmarShaked/ReactWeather/master/widget.png?raw=true "re-weather")
 
-# ReactWeather
-[![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/react-weather)
+# ReWeather
+[![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/re-weather)
 ![license](https://img.shields.io/badge/license-MIT%20License-green.svg)
 
 Minimalistic react weather component.
 
 
 ## Features
-
-- Beautiful Widgets
-- Minimal Design
+- No design. Just API wrapper.
 - Supports openweathermap API
 - Extendable to more external API'S
-- Simple & Minimal API.
+- Only Foucus on Data.
 
 
 
@@ -80,8 +78,7 @@ props:
 - units - The units of the temperature - metric / imperial - not required, default is metric
 
 ### Credits
-ReactWeather is inspired by [Soumya Ranjan Bishi](http://drbl.in/olwj)
-credits to Alberto Jerez about the [sass code](http://codepen.io/ajerez/pen/KwYNWZ)
+re-weather is based on (Amar Shaked)[https://github.com/AmarShaked/ReactWeather] idea.
 
 ### License
 MIT
