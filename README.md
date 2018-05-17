@@ -1,84 +1,80 @@
-![Alt text](https://raw.githubusercontent.com/AmarShaked/ReactWeather/master/widget.png?raw=true "re-weather")
-
 # ReWeather
+
 [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/re-weather)
 ![license](https://img.shields.io/badge/license-MIT%20License-green.svg)
 
-Minimalistic react weather component.
-
+A package to get weather in js.
 
 ## Features
-- No design. Just API wrapper.
-- Supports openweathermap API
-- Extendable to more external API'S
-- Only Foucus on Data.
 
-
+* No design. Just API wrapper.
+* Supports openweathermap API
+* Extendable to more external API'S
+* Only Foucus on Data.
 
 ### Installing
-Install via npm:
-```
-npm install react-weather --save
-```
 
+Install via npm:
+
+```
+npm install re-weather --save
+```
 
 ### Quick Example
-This example shows how to use the GenericWeather component.
-The component display static data via props.
-``` javascript
-import ReactDOM from 'react-dom';
-import { GenericWeather } from 'react-weather';
 
+This example shows how to use the re-weather in React.js to set it's data into a API.
 
-ReactDOM.render(
-  <GenericWeather city="Jerusalem" temp=17.61 status="sun" />,
-  document.getElementById('root')
-)
+```javascript
+ReWeather({
+  token: "This-is-openweathermap-api",
+  city: "Tehran"
+}).then(weather =>
+  this.setState({
+    weather
+  })
+);
 ```
 
-#### Example using  Openweathermap api
-https://openweathermap.org/api - Get real time weather via Openweathermap api.
+## Dociumention
 
-``` javascript
-import ReactDOM from 'react-dom';
-import { OpenWeatherMap } from 'react-weather';
+### Current weather data: getCurrent()
 
+will get current weather
+read [full OWM-API docs](https://openweathermap.org/current) to learn more.
+it will return sometinhg like this:
 
-ReactDOM.render(
-  <OpenWeatherMap city="Jerusalem" country="IL" appid="your-api-key" />,
-  document.getElementById('root')
-)
+```javascript
+{
+  "coord": {
+    "lon":145.77,"lat":-16.92
+  },
+  "weather":[
+    {"id":803,"main":"Clouds","description":"broken clouds","icon":"04n"}
+  ],
+  "base":"cmc stations",
+  "main":{"temp":293.25,"pressure":1019,"humidity":83,"temp_min":289.82,"temp_max":295.37},
+  "wind":{"speed":5.1,"deg":150},
+  "clouds":{"all":75},
+  "rain":{"3h":3},
+  "dt":1435658272,
+  "sys":{"type":1,"id":8166,"message":0.0166,"country":"AU","sunrise":1435610796,"sunset":1435650870},
+  "id":2172797,
+  "name":"Cairns",
+  "cod":200
+}
 ```
 
+### Current weather data: getCurrent()
 
-## ReactWeather API
+will get 5 day forecast that is available at any location or city. It includes weather data every 3 hours.
+read [full OWM-API docs](https://openweathermap.org/forecast5) to learn more.
 
-##### GenericWeather
-The basic component is GenericWeather.
-this component is the main component, all the other components use it.
-```
-<GenericWeather />
-```
+> In progress...
 
-props:
-  - city - The city name
-  - temp - the temperature
-  - status - the icon to show - meanwhile it's just sun / rain
+## Credits
 
-###### OpenWeatherMap
-This component use the openweathermap api to get weather data.
-the component fetch using axios data from the api, and render the GenericWeather for you.
-```
-<OpenWeatherMap />
-```
-props:
-- city - The city name - required
-- country - The country code - not required
-- appid - The api key from openweathermap - required
-- units - The units of the temperature - metric / imperial - not required, default is metric
-
-### Credits
 re-weather is based on (Amar Shaked)[https://github.com/AmarShaked/ReactWeather] idea.
 
 ### License
+
 MIT

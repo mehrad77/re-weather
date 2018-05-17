@@ -1,17 +1,13 @@
 {
   "name": "re-weather",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Weather API Component.",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mehrad77/re-weather.git"
   },
-  "keywords": [
-    "react",
-    "Weather",
-    "API"
-  ],
+  "keywords": ["react", "Weather", "API"],
   "bugs": {
     "url": "https://github.com/mehrad77/re-weather/issues"
   },
@@ -26,6 +22,7 @@
     "request-promise": "^4.2.2"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "jest": "^22.0.0"
   },
   "jest": {

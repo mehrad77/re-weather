@@ -3,12 +3,12 @@ var request = require("request-promise");
 var owm = {
   token: null,
   city: null,
-  getCurrent: function () {
+  getCurrent: function() {
     return request({
       method: "GET",
       uri: `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${
         owm.city
-        }&APPID=${owm.token}`,
+      }&APPID=${owm.token}`,
       json: true
       // headers: {
       //   Authorization: "Bearer " + owm.token,
