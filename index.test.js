@@ -1,4 +1,4 @@
-import ReWeather from "./index";
+import { ReWeather } from "./index";
 
 it("works with promises", () => {
   ReWeather({
@@ -10,8 +10,8 @@ it("works with promises", () => {
         name: expect.toBe("London"),
         wind: expect.toBeDefined(),
         main: expect.toBeDefined(),
-        weather: expect.toBeDefined(),
-      }),
+        weather: expect.toBeDefined()
+      })
     )
-  )
+  );
 });

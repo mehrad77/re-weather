@@ -24,4 +24,4 @@ function ReWeather(params) {
   return owm.getCurrent();
 }
 
-export default ReWeather;
+export { ReWeather };

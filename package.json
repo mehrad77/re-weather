@@ -1,6 +1,6 @@
 {
   "name": "re-weather",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React Weather API Component.",
   "main": "index.js",
   "repository": {
